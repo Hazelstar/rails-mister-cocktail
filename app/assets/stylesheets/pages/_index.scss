@@ -1,2 +1,45 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.banner {
+  background: aquamarine;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+
+
+    h1 {
+      font-size: 70px;
+      padding: 40px;
+    }
+}
+
+.header {
+  margin: 20px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+    h4{
+      font-family: "Lobster", "cursive";
+    }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+  gap: 20px;
+  background-color: lavender;
+  margin: 20px;
+  padding: 20px;
+
+    .card-description {
+      background-color: medium-aquamarine;
+      font-weight: bold;
+        h2 {
+          text-decoration: none;
+        }
+    }
+}

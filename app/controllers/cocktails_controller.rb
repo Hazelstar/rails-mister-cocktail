@@ -2,16 +2,20 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show]
 
   def index
-    @cocktails = Cocktail.all
-  end
-
-  def create
-    @cocktail.create(cocktail_params)
-    redirect_to cocktails_path(@cocktail)
+    @cocktails = Cocktail.all.order(name: :asc)
   end
 
   def new
     @cocktail = Cocktail.new
+  end
+
+  def create
+    @cocktail = Cocktail.new(cocktail_params)
+    if @cocktail.save
+      redirect_to cocktail_path(@cocktail), notice: "Cocktail #{@cocktail.name} was created successfully!"
+    else
+      render :new
+    end
   end
 
   def show
@@ -20,7 +24,7 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :ingredient, :doses)
+    params.require(:cocktail).permit(:name)
   end
 
   def set_cocktail

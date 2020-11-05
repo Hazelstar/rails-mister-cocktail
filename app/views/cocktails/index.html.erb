@@ -1,15 +1,29 @@
-<h1>My Cocktails</h1>
-
-<h4>Select a cocktail to see more:</h4>
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-12 col-md-6 col-lg-3">
-          <div class="card-description">
-            <h2><%= cocktail.name %></h2>
-          </div>
-          <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
-      </div>
-    <% end %>
+<% if @cocktails.any? %>
+  <div class="banner">
+    <h1>My Cocktails</h1>
+  </div>
+    <div class="header">
+        <h4>Select a cocktail</h4>
+        <%= link_to 'Add cocktail', new_cocktail_path(@cocktail), class: 'btn btn-success' %>
     </div>
-</div>
+    <div class="container">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card-description">
+              <h2><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id) %></h2>
+            </div>
+        </div>
+      <% end %>
+    </div>
+
+<% else %>
+    <div class="container">
+      <h4 class="empty-state">Oh no! Such empty...</h4>
+      <div class="header">
+        <h4>Add a new one</h4>
+        <%= link_to 'Add your first cocktail', new_cocktail_path(@cocktail), class: 'btn btn-success' %>
+      </div>
+    </div>
+<% end %>
+
+<!-- <div data-aos="flip-right"></div> -->
