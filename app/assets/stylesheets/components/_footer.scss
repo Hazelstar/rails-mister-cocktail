@@ -1,0 +1,13 @@
+.footer {
+  background-image: linear-gradient(rgb(86, 209, 170), gold, rgb(242, 156, 109));
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+    a {
+      font-size: 16px;
+      text-decoration: none;
+    }
+}
+

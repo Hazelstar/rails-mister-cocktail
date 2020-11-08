@@ -1,45 +1,87 @@
 // Specific CSS for your home-page
+body {
+  background-color: rgb(242, 156, 109);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.background-show-image {
+  height: 100vh;
+  opacity: 0.7;
+}
+
 .banner {
-  background: aquamarine;
+  background-image: linear-gradient(rgb(242, 156, 109), gold, rgb(86, 209, 170));
   height: 80vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 70px;
+  box-shadow: -1px 3px 10px gold;
 
     h1 {
-      font-size: 70px;
+      font-size: 80px;
+      letter-spacing: 4px;
       padding: 20px;
       margin: 0;
+      text-shadow: 2px 2px 1px gold;
+      color: rgb(5, 168, 117);
     }
 }
 
 .header {
+  height: 100px;
   margin: 20px;
   padding: 16px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-    h4{
+  display: inline;
+  position: relative;
+    h4 a {
       font-family: "Lobster", "cursive";
+      font-size: 25px;
+      text-align: center;
+      padding: 8px;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
   grid-gap: 60px;
   gap: 20px;
   background-color: lavender;
-  margin: 20px;
+  margin: auto;
   padding: 20px;
 
     .card-description {
-      background-color: medium-aquamarine;
-      font-weight: bold;
-        h2 {
-          text-decoration: none;
+      height: 300px;
+      background-color: lavender;
+      border: 8px solid rgb(5, 168, 117);
+      text-align: center;
+      padding: 20px;
+        .card-description:hover {
+          border: 8px solid black;
+          box-shadow: 2px 2px 1px gold;
+        }
+        a {
+          color: rgb(5, 168, 117);
+          letter-spacing: 4px;
+          text-shadow: 2px 2px 1px gold;
+          padding: 20px;
+            &:hover {
+              color: black;
+              text-shadow: 2px 2px 1px gold;
+              text-decoration: none;
+            }
         }
     }
 }
+
+
+

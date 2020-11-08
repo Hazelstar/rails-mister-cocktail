@@ -3,16 +3,17 @@
     <h1>Flask</h1>
       <h1>&</h1>
       <h1>Muddler</h1>
+     <!--  <%#= cl_image_tag("zoltan-tasi-X75dTgoQ2Hs-unsplash_dxxp7h.jpg", width: 400, height: 300, crop: :fill) %> -->
   </div>
     <div class="header">
-        <h4>Select a cocktail</h4>
-        <%= link_to 'Add cocktail', new_cocktail_path(@cocktail), class: 'btn btn-success' %>
+      <h4><%= link_to 'Add cocktail', new_cocktail_path(@cocktail), class: 'btn btn-sm btn-outline-success' %></h4>
     </div>
     <div class="container">
       <% @cocktails.each do |cocktail| %>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col">
             <div class="card-description">
               <h2><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id) %></h2>
+              <%#= cl_image_tag @cocktail.photo.key, width: 400, height: 300, crop: :fill %>
             </div>
         </div>
       <% end %>
@@ -23,9 +24,9 @@
       <h4 class="empty-state">Oh no! Such empty...</h4>
       <div class="header">
         <h4>Add a new one</h4>
-        <%= link_to 'Add your first cocktail', new_cocktail_path(@cocktail), class: 'btn btn-success' %>
+        <%= link_to 'Add your first cocktail', new_cocktail_path(@cocktail), class: 'btn btn-sm btn-outline-success' %>
       </div>
     </div>
 <% end %>
 
-<!-- <div data-aos="flip-right"></div> -->
+<!-- <div ></div> -->

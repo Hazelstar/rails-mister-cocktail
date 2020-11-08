@@ -1,0 +1,30 @@
+
+.card {
+  background-color: rgb(242, 100, 25);
+  margin: 0;
+  position: absolute;
+  width: 80vh;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  box-shadow: 0px 0px 7px gold;
+    h2 {
+      letter-spacing: 4px;
+      text-align: center;
+      text-shadow: 2px 2px 1px gold;
+      padding: 16px;
+    }
+      a {
+      color: rgb(86, 209, 170);
+      padding: 10px;
+      font-size: 23px;
+
+        &:hover {
+          color: black;
+          text-shadow: 2px 2px 1px gold;
+          text-decoration: none;
+        }
+    }
+}

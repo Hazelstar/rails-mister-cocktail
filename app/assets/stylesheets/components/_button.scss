@@ -1,0 +1,12 @@
+.btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 25px;
+  margin: 20px;
+  float: left;
+    &:hover {
+      color: black;
+      text-shadow: 2px 2px 1px gold;
+      box-shadow:2px 2px 1px gold;
+    }
+}

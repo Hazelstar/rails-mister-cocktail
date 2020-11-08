@@ -1,15 +1,71 @@
+body {
+  background-color: rgb(242, 156, 109);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
 .cocktail-show {
+  background-color: rgb(242, 100, 25);
+  box-shadow: 1px 1px 8px gold;
+  margin: 0;
+  position: absolute;
+  width: 90vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 40px;
-  margin: 50px;
     h2 {
       text-align: center;
+      letter-spacing: 4px;
+      font-size: 50px;
+      padding: 20px;
+      margin: 0;
+      text-shadow: 2px 2px 1px gold;
+      color: rgb(5, 168, 117);
     }
+    a {
+      color: rgb(86, 209, 170);
+      padding: 10px;
+      font-size: 23px;
+
+        &:hover {
+          color: black;
+          text-shadow: 2px 2px 1px gold;
+          text-decoration: none;
+        }
+    }
+}
+
+.card-recipe {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 4;
+  align-items: flex-end;
+    div {
+      height: 400px;
+    }
+    img {
+      border-radius: 25px;
+    }
+    .alert {
+      height: 50px;
+    }
+}
+
+#ingredient {
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 1px gold;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .ingredients-list {
   li {
     list-style: none;
     padding: 0px 10px;
+    text-align: right;
   }
 }
+
 
